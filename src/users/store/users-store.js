@@ -1,10 +1,14 @@
+import { loadUsers } from "../use-cases/load-users"
+
 const state = {
-    currentPage: 0,
+    person: 0,
     users: [],
 }
 
 const loadNextPage = async() => {
-    throw new Error('Not implemented')
+
+    await loadUsers( state.person + 1);
+
 }
 
 const loadPreviousPage = async() => {
@@ -27,5 +31,5 @@ export default {
     reloadPage,
 
     getUser: () => [...state.users],
-    getCurrentPage: () => state.currentPage,
+    getCurrentPage: () => state.person,
 }
