@@ -6,4 +6,6 @@ export const UsersApp = async( element ) => {
 
     await usersStore.loadNextPage();
 
+    console.log(usersStore.getUser())
+
 } 

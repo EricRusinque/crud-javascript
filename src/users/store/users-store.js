@@ -2,13 +2,16 @@ import { loadUsers } from "../use-cases/load-users"
 
 const state = {
     person: 0,
-    users: [],
+    user: [],
 }
 
 const loadNextPage = async() => {
 
-    await loadUsers( state.person + 1);
+    const user = await loadUsers( state.person + 1);
+    if( user.length === 0 ) return;
 
+    state.person += 1;
+    state.user = user;
 }
 
 const loadPreviousPage = async() => {
@@ -30,6 +33,6 @@ export default {
     onUserChanged,
     reloadPage,
 
-    getUser: () => [...state.users],
+    getUser: () => [...state.user],
     getCurrentPage: () => state.person,
 }
