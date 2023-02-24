@@ -15,7 +15,7 @@ export const localhostPersonaToModel = ( localhostPerson ) => {
     } = localhostPerson
 
     return new Person({
-        Quote: quote,
+        quote,
         author
     })
 

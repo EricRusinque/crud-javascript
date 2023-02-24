@@ -15,6 +15,7 @@ export const loadUsers = async( page = 1 ) => {
     const data = await res.json();
 
     const person = data.map( localhostPersonaToModel );
+    console.log(person)
 
     return person
 }
