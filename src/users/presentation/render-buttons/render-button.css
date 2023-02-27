@@ -1,6 +1,7 @@
-.buttons {
-    margin: 10px
+button {
+    margin: 10px;
 }
+
 
 #current-page {
     font-size: 1.3rem;
