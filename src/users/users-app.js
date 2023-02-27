@@ -1,4 +1,6 @@
-import { renderTable } from "./presentation/render-table";
+
+import { renderButtons } from "./presentation/render-buttons/render-buttons";
+import { renderTable } from "./presentation/render-table/render-table";
 import usersStore from "./store/users-store";
 
 export const UsersApp = async( element ) => {
@@ -8,6 +10,7 @@ export const UsersApp = async( element ) => {
     await usersStore.loadNextPage();
     element.innerHTML = ''
 
-    renderTable( element )
+    renderTable( element );
+    renderButtons( element );
 
 } 

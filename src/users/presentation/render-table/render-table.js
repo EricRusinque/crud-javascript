@@ -1,4 +1,4 @@
-import usersStore from '../store/users-store';
+import usersStore from '../../store/users-store';
 import './render-table.css';
 
 let table;
@@ -45,6 +45,7 @@ export const renderTable = ( element ) => {
                 <td>${ u.quote }</td>
                 <td>
                     <a href="#/" data-id="${ user }">Select</a>
+                    |
                     <a href="#/" data-id="${ user }">Delete</a>
                 </td>
             </tr>
